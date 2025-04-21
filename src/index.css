@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 45 54% 52%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 45 54% 52%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 45 54% 52%;
+
+    --primary: 45 54% 52%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 45 54% 52%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 45 54% 52%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 45 54% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-salon-black text-white;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Gold accents for links */
+  a {
+    @apply text-salon-gold hover:text-salon-gold-light transition-colors;
+  }
+}
+
+/* Custom utility classes */
+@layer components {
+  .gold-gradient {
+    background: linear-gradient(to right, #D4AF37, #FFD700, #B8860B);
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .gold-border {
+    @apply border-salon-gold;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .salon-btn {
+    @apply px-6 py-3 bg-salon-gold text-salon-black font-medium rounded-md hover:bg-salon-gold-light transition-colors;
+  }
+  
+  .salon-outline-btn {
+    @apply px-6 py-3 border-2 border-salon-gold text-salon-gold font-medium rounded-md hover:bg-salon-black hover:text-salon-gold-light hover:border-salon-gold-light transition-colors;
+  }
+}
